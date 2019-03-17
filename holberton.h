@@ -12,7 +12,7 @@ typedef struct ftoFunc
 {
 	char *form;
 	(*f)((*fu)(char c));
-} strTp
+} strTp;
 
 typedef struct strTp ftoFunc;
 char charForm(int(*f)(char c));
@@ -20,10 +20,13 @@ int _putchar(char c);
 int _printf(const char *format);
 char *strForm(char *);
 int modForm(int n);
+<<<<<<< HEAD
 int _strlen(char *s);
 void _puts(char *str);
 char *_strcpy(char *dest, char *src);
 void _swap(int *a, int *b);
 int _strcmp(char *s1, char *s2);
+=======
+>>>>>>> 44664232283c568e2a0086ff0c010fb013e86d5c
 
 #endif
