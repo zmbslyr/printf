@@ -6,11 +6,11 @@
  *
  * Return: Function pointer
  */
-int (*getForm(const char *s))(char c)
+int (*getForm(const char *s))(va_list c)
 {
 	/* Structure with all the format types  */
 	strTp charType[] = {
-		{"%c", charForm},
+		{"c", charForm},
 		/*{"%s", strForm},*/
 		{NULL, NULL}
 	};
@@ -18,7 +18,11 @@ int (*getForm(const char *s))(char c)
 
 	/* Compares input string vs the struct and return the function associated  */
 	for (index = 0; charType[index].form != NULL; index++)
-		if (_strcmp(charType[index].form, s) == 0)
-			return (charType[index].f);
+		if (*s == '%')
+		{
+			index ++;
+			if (_strcmp(charType[index].form, s) == 0)
+				return (charType[index].f);
+		}
 	return (NULL);
 }

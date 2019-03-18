@@ -11,11 +11,10 @@
 typedef struct ftoFunc
 {
 	char *form;
-	int (*f)(char c);
+	int (*f)(va_list c);
 } strTp;
 
-typedef struct strTp ftoFunc;
-int charForm(char c);
+int charForm(va_list c);
 int _putchar(char c);
 int _printf(const char *format, ...);
 char *strForm(char *);
@@ -25,6 +24,6 @@ void _puts(char *str);
 char *_strcpy(char *dest, char *src);
 void _swap(int *a, int *b);
 int _strcmp(const char *s1, const char *s2);
-int (*getForm(const char *s))(char c);
+int (*getForm(const char *s))(va_list c);
 
 #endif
