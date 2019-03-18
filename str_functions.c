@@ -6,7 +6,8 @@
  *
  * return: integer
  */
-int charForm(char c)
+int charForm(va_list c)
 {
-	return(_putchar(c));
+	write(1, &c, 1);
+	return (0);
 }
