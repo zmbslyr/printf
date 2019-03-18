@@ -2,13 +2,12 @@
 
 /**
  * main - Entry point
- * @argc: Number of arguments given
- * @argv: Array of string values of arguments given
  *
  * Return: 0 (Success)
  */
 int main(void)
 {
-	_printf("%c", 'h');
+	_printf("This is a string %c\n", 'h');
+	_printf("This is also a sting\n");
 	return (0);
 }
