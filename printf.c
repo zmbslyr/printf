@@ -1,4 +1,4 @@
-#include "holberon.h"
+#include "holberton.h"
 
 int _printf(const char *format, ...)
 {
@@ -9,4 +9,5 @@ int _printf(const char *format, ...)
 	getForm(format);
 
 	va_end(input);
+	return (0);
 }

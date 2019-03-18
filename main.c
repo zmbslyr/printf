@@ -7,12 +7,8 @@
  *
  * Return: 0 (Success)
  */
-int main(int argc, char *argv[])
+int main(void)
 {
-	if (argv != NULL)
-	{
-		_printf(argv[1], argv[2]);
-		return (1);
-	}
-        return (NULL);
+	_printf("%c", 'h');
+	return (0);
 }

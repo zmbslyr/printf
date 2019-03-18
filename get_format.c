@@ -6,16 +6,19 @@
  *
  * Return: Function pointer
  */
-char (*getForm(char *s))(char c)
+int (*getForm(const char *s))(char c)
 {
+	/* Structure with all the format types  */
 	strTp charType[] = {
 		{"%c", charForm},
-		{"%s", strForm},
+		/*{"%s", strForm},*/
 		{NULL, NULL}
 	};
 	int index;
 
-	for (index = 0; charType[index].form != NULL)
+	/* Compares input string vs the struct and return the function associated  */
+	for (index = 0; charType[index].form != NULL; index++)
 		if (_strcmp(charType[index].form, s) == 0)
 			return (charType[index].f);
+	return (NULL);
 }
