@@ -9,9 +9,8 @@
 char (*getForm(char *s))(char c)
 {
 	strTp charType[] = {
-		{"c", charForm},
-		{"s", strForm},
-		{"%", modForm},
+		{"%c", charForm},
+		{"%s", strForm},
 		{NULL, NULL}
 	};
 	int index;
