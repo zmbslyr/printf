@@ -4,13 +4,10 @@ int _printf(const char *format, ...)
 {
 	va_list input;
 	char *strPointer = (char *)format;
-<<<<<<< HEAD
 	int c;
 	char *str;
-=======
 	int c, d;
 	void *s;
->>>>>>> af6440d49c8283ef15a01c12a145ad3b6127df70
 
 	va_start(input, format);
 	for (; *strPointer; strPointer++)
