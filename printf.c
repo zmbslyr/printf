@@ -4,7 +4,7 @@ int _printf(const char *format, ...)
 {
 	va_list input;
 	char *strPointer = (char *)format;
-	int c, d;
+	int c, d, index, count = 0;
 	void *s;
 	char buffer[1024];
 	int moduloNumber = 0;
@@ -20,11 +20,12 @@ int _printf(const char *format, ...)
 			{
 			case 'c':
 				c = va_arg(input, int);
-				write(1, &c, 1);
+				count = write(1, &c, 1);
 				break;
 			case 's':
 				s = va_arg(input, char *);
 				_puts(s);
+				count = _strlen(s);
 				break;
 			case 'd':
 				d = va_arg(input, int);
@@ -38,5 +39,7 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(input);
-	return (_strlen(strPointer) - moduloNumber);
+	for (index = 0; format[index]; index++)
+		;
+	return ((index + count + 1) - (2 * moduloNumber));
 }

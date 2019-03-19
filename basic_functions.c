@@ -52,18 +52,18 @@ char *_strcpy(char *dest, char *src)
  * _puts - places a string followed by a new line
  * @str: string needed to be printed
  *
+ * Return: Number of bytes printed to the console
  **/
 
-void _puts(char *str)
+int _puts(char *str)
 {
 	int i;
-	char x;
 
-	for (i = 0; str[i] != 0; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		x = str[i];
-		_putchar(x);
+		_putchar(str[i]);
 	}
+	return (i);
 }
 
 /**

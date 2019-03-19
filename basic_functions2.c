@@ -24,14 +24,28 @@ int _strcmp(const char *s1, const char *s2)
 	return (0);
 }
 
+/**
+ * _reverse - reverses a string
+ * @buffer: String to be reversed
+ * @i: Start of the string
+ * @j: End of the string
+ *
+ * Return: Reverse String
+ */
 char *_reverse(char *buffer, int i, int j)
 {
 	while (i < j)
 		_swap(&buffer[i++], &buffer[j--]);
 
-	return buffer;
+	return (buffer);
 }
 
+/**
+ * _abs - Finds the absolute value of an integer
+ * @n: Integer to find absolute value of
+ *
+ * Return: Absolute value of integer
+ */
 int _abs(int n)
 {
 	if (n < 0)
@@ -42,17 +56,25 @@ int _abs(int n)
 	return (n);
 }
 
-char *_itoa(int value, char* buffer, int base)
+/**
+ * _itoa - Converts integer to string
+ * @value: Number to be converted
+ * @buffer: Place converted value is stored
+ * @base: Base value is
+ *
+ * Return: character array of value
+ */
+char *_itoa(int value, char *buffer, int base)
 {
 	int n = _abs(value);
 	int r;
 	int i = 0;
 
 	if (base < 2 || base > 32)
-                return buffer;
+		return (buffer);
 	while (n)
 	{
-	        r = n % base;
+		r = n % base;
 
 		if (r >= 10)
 			buffer[i++] = 65 + (r - 10);
@@ -70,5 +92,5 @@ char *_itoa(int value, char* buffer, int base)
 
 	buffer[i] = '\0';
 
-	return _reverse(buffer, 0, i - 1);
+	return (_reverse(buffer, 0, i - 1));
 }
