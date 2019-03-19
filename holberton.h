@@ -6,6 +6,13 @@
 #include <stdarg.h>
 #include <unistd.h>
 
+/**
+ * struct ftoFunc - struct holding string and function
+ * @form: string to convert to function
+ * @f: function to run
+ *
+ * Description: Converts a string to a function to use
+ */
 typedef struct ftoFunc
 {
 	char *form;
