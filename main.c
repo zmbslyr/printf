@@ -14,6 +14,7 @@ int main(void)
 	_printf("This is a string %c\n", 'h');
 	_printf("This is also a sting\n");
 	_printf("That's a %s!\n", "penis");
+	_printf("%i\n", 5);
 	_printf("%d\n", 4);
 	_printf("This is a number: %d\n", 22);
 	_printf("This is a char: %c\nThis is a string: %s\nThis is a number: %d\n", 'c', "String", 432);
