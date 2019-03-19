@@ -74,7 +74,7 @@ void _puts(char *str)
  *
  **/
 
-void _swap(int *a, int *b)
+void _swap(char *a, char *b)
 {
 	int n;
 

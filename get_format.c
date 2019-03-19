@@ -20,7 +20,7 @@ int (*getForm(const char *s))(va_list c)
 	for (index = 0; charType[index].form != NULL; index++)
 		if (*s == '%')
 		{
-			index ++;
+			index++;
 			if (_strcmp(charType[index].form, s) == 0)
 				return (charType[index].f);
 		}
