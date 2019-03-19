@@ -44,15 +44,15 @@ int _abs(int n)
 
 char *_itoa(int value, char* buffer, int base)
 {
-	if (base < 2 || base > 32)
-		return buffer;
-
 	int n = _abs(value);
-
+	int r;
 	int i = 0;
+
+	if (base < 2 || base > 32)
+                return buffer;
 	while (n)
 	{
-		int r = n % base;
+	        r = n % base;
 
 		if (r >= 10)
 			buffer[i++] = 65 + (r - 10);
