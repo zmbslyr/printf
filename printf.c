@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+ * _printf - Prints a formatted string
+ * @format: Constant string to be formatted
+ *
+ * Return: Formatted string
+ */
 int _printf(const char *format, ...)
 {
 	va_list input;
