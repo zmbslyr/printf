@@ -7,12 +7,14 @@ int _printf(const char *format, ...)
 	int c, d;
 	void *s;
 	char buffer[1024];
+	int moduloNumber = 0;
 
 	va_start(input, format);
 	for (; *strPointer; strPointer++)
 	{
 		if (*strPointer == '%')
 		{
+			moduloNumber++;
 			strPointer++;
 			switch (*strPointer)
 			{
@@ -36,5 +38,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(input);
-	return (0);
+	return (_strlen(strPointer) - moduloNumber);
 }
