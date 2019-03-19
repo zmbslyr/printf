@@ -14,6 +14,6 @@ int main(void)
 	_printf("That's a %s!\n", "penis");
 
 
-	_printf("%s", _itoa(i, buffer, 10)); 
+	_printf("%d\n", 4);
 	return (0);
 }

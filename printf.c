@@ -6,6 +6,7 @@ int _printf(const char *format, ...)
 	char *strPointer = (char *)format;
 	int c, d;
 	void *s;
+	char buffer[1024];
 
 	va_start(input, format);
 	for (; *strPointer; strPointer++)
@@ -25,7 +26,7 @@ int _printf(const char *format, ...)
 				break;
 			case 'd':
 				d = va_arg(input, int);
-				write(1, &d, 1);
+				_puts(_itoa(d, buffer, 10));
 				break;
 			}
 		}
