@@ -9,5 +9,6 @@ int main(void)
 {
 	_printf("This is a string %c\n", 'h');
 	_printf("This is also a sting\n");
+	_puts("String li\"teral");
 	return (0);
 }

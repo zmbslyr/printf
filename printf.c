@@ -5,6 +5,7 @@ int _printf(const char *format, ...)
 	va_list input;
 	char *strPointer = (char *)format;
 	int c;
+	char *str;
 
 	va_start(input, format);
 	for (;*strPointer; strPointer++)
