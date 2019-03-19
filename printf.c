@@ -4,7 +4,7 @@ int _printf(const char *format, ...)
 {
 	va_list input;
 	char *strPointer = (char *)format;
-	int c, d;
+	int c, d, i;
 	void *s;
 	char buffer[1024];
 
@@ -26,6 +26,10 @@ int _printf(const char *format, ...)
 				break;
 			case 'd':
 				d = va_arg(input, int);
+				_puts(_itoa(d, buffer, 10));
+				break;
+			case 'i':
+				i = va_arg(input, int);
 				_puts(_itoa(d, buffer, 10));
 				break;
 			}
